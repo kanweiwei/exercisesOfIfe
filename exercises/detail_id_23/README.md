@@ -1,4 +1,5 @@
 # 自定义checkbox， radio样式
+预览地址：[自定义checkbox， radio样式](http://www.klhut.com/exercisesOfIfe/exercises/detail_id_23/index.html)
 
 ## 实现方式
 1. 背景图
