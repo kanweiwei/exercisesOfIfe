@@ -17,6 +17,7 @@
   + 方便调整大小
   缺点
   + 用到了一些css3的内容，兼容性不高。ie需要做相应的polyfill
+
 ## 参考资料
 1. [MDN label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label): 了解html中label的基本知识
 2. [MDN background-position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position): 了解背景图片定位相关知识
