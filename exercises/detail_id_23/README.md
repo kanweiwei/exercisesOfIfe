@@ -4,6 +4,19 @@
 1. 背景图
 2. 伪元素
 
+## 总结
+1. 背景图
+  优点
+  + 兼容性好，不涉及css3的一些用法
+  缺点
+  + 冗余的标签
+  + 受背景图的影响，无法调整大小
+2. 伪元素
+  优点
+  + 结构清晰，没有冗余的标签
+  + 方便调整大小
+  缺点
+  + 用到了一些css3的内容，兼容性不高。ie需要做相应的polyfill
 ## 参考资料
 1. [MDN label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label): 了解html中label的基本知识
 2. [MDN background-position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position): 了解背景图片定位相关知识

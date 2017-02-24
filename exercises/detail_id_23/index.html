@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>自定义checkbox， radio样式</title>
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        自定义checkbox
+        <form class="one" action="" method="post" >
+          背景图:<span>您喜欢的水果？</span>
+          <br />
+          <label><input name="fruit[]" type="checkbox" value="苹果" /><div class="fruitbox"></div>苹果 </label><br />
+          <label><input name="fruit[]" type="checkbox" value="桃子" /><div class="fruitbox"></div>桃子 </label><br />
+          <label><input name="fruit[]" type="checkbox" value="香蕉" /><div class="fruitbox"></div>香蕉 </label><br />
+          <label><input name="fruit[]" type="checkbox" value="梨" /><div class="fruitbox"></div>梨 </label><br />
+        </form>
+
+        <form class="two" action="index.html" method="post" >
+          伪元素:<span>您喜欢的水果？</span>
+          <br />
+          <label><input name="fruit[]" type="checkbox" value="苹果" />苹果 </label><br />
+          <label><input name="fruit[]" type="checkbox" value="桃子" />桃子 </label><br />
+          <label><input name="fruit[]" type="checkbox" value="香蕉" />香蕉 </label><br />
+          <label><input name="fruit[]" type="checkbox" value="梨" />梨 </label><br />
+        </form>
+      </div>
+      <div>
+        自定义radio
+        <form class="one" action="" method="post" >
+          背景图:<span>您喜欢的水果？</span>
+          <br />
+          <label><input name="fruit" type="radio" value="苹果" /><div class="fruitbox"></div>苹果 </label><br />
+          <label><input name="fruit" type="radio" value="桃子" /><div class="fruitbox"></div>桃子 </label><br />
+          <label><input name="fruit" type="radio" value="香蕉" /><div class="fruitbox"></div>香蕉 </label><br />
+          <label><input name="fruit" type="radio" value="梨" /><div class="fruitbox"></div>梨 </label><br />
+        </form>
+
+        <form class="two" action="index.html" method="post" >
+          伪元素:<span>您喜欢的水果？</span>
+          <br />
+          <label><input name="fruit" type="radio" value="苹果" />苹果 </label><br />
+          <label><input name="fruit" type="radio" value="桃子" />桃子 </label><br />
+          <label><input name="fruit" type="radio" value="香蕉" />香蕉 </label><br />
+          <label><input name="fruit" type="radio" value="梨" />梨 </label><br />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

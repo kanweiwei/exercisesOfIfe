@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  background-color: #ccc;
+}
+.main {
+  position: relative;
+  width: 800px;
+  margin: 20px auto 0;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radisu: 10px;
+  padding: 30px 30px;
+}
+.main:after {
+  position: relative;
+  display: block;
+  content: ' ';
+  clear: both;
+}
+.main > div {
+  position: relative;
+  float: left;
+  width: 50%;
+}
+.main label {
+  position: relative;
+  line-height: 30px;
+  display:inline-block;
+  *display:inline;/*兼容ie，没必要写*/
+  *zoom:1;/*兼容ie，没必要写*/
+  vertical-align: middle;
+}
+/*==利用背景图自定义checkbox\radio==*/
+.main .one input[type='checkbox'], .main .one input[type='radio'] {
+  position: relative;
+  visibility: hidden;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  visibility: middle;
+}
+.main .one .fruitbox {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  display: inline;
+  width: 16px;
+  height: 16px;
+  background: url('../images/icon_sprite.png') no-repeat;
+}
+.main .one input[type='checkbox']+.fruitbox {
+  background-position: -25px -33px;
+}
+.main .one input[type='radio']+.fruitbox {
+  background-position: -24px -10px;
+}
+.main .one input[type='radio']:checked + .fruitbox {
+  background-position: -59px -10px;
+}
+.main .one input[type='checkbox']:checked + .fruitbox {
+  background-position: -60px -32px;
+}
+  /*==利用伪元素自定义checkbox\radio==*/
+.main .two {
+  position: relative;
+  margin-top: 20px;
+}
+.main .two input[type='checkbox'], .main .two input[type='radio'] {
+  position: relative;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.main .two input[type='checkbox']:before {
+  position: relative;
+  display: block;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ .main .two input[type='radio']:before {
+  position: relative;
+  display: block;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main .two input[type='checkbox']:focus, .main .two input[type='radio']:focus {
+  outline: 0 none;
+}
+.main .two input[type='radio']:checked:after {
+  position: absolute;
+  display: block;
+  content: ' ';
+  background-color: red;
+  width: 40%;
+  height: 40%;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  -webkit-border-box: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.main .two input[type='checkbox']:checked:after {
+  position: absolute;
+  display: block;
+  content: '\2713';
+  color: red;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
