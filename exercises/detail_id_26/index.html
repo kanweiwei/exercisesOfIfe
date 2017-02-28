@@ -17,6 +17,7 @@
         width: 200px;
         border: 1px solid #ccc;
         list-style: none;
+        border-radius: 4px;
         display: none;
         left:0;
         top:0;
@@ -32,6 +33,10 @@
       }
       .menu li:first-child {
         border-top: 0 none;
+      }
+      .menu li:hover {
+        background-color: #666;
+        color: #fff;
       }
     </style>
 </head>
@@ -52,21 +57,20 @@
         document.oncontextmenu = function() {
             contextmenu.style.display = "block";
             if( (document.body.scrollLeft + event.x + contextmenu.clientWidth) >= ww) {
-              contextmenu.style.left = document.body.scrollLeft + event.x - 10 - contextmenu.clientWidth + 'px';
+              contextmenu.style.left = document.body.scrollLeft + event.x - 20 - contextmenu.clientWidth + 'px';
               if (document.body.scrollTop + event.y + contextmenu.clientHeight >= wh) {
-                contextmenu.style.top = document.body.scrollTop + event.y - 10 - contextmenu.clientHeight + 'px';
+                contextmenu.style.top = document.body.scrollTop + event.y - 20 - contextmenu.clientHeight + 'px';
               }else {
                 contextmenu.style.top = document.body.scrollTop + event.y +'px';
               }
             } else {
-              contextmenu.style.left = document.body.scrollLeft + event.x + 10 +'px';
+              contextmenu.style.left = document.body.scrollLeft + event.x + 20 +'px';
               if (document.body.scrollTop + event.y + contextmenu.clientHeight >= wh) {
-                contextmenu.style.top = document.body.scrollTop + event.y - 10 - contextmenu.clientHeight + 'px';
+                contextmenu.style.top = document.body.scrollTop + event.y - 20 - contextmenu.clientHeight + 'px';
               }else {
                 contextmenu.style.top = document.body.scrollTop + event.y +'px';
               }
             }
-
 
             return false //返回 false，以屏蔽真正的右键菜单的显示
         }
