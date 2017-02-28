@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>自定义右键菜单</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 2000px;
+      }
+      .menu {
+        position: absolute;
+        width: 200px;
+        border: 1px solid #ccc;
+        list-style: none;
+        display: none;
+        left:0;
+        top:0;
+        z-index: 999;
+      }
+      .menu li {
+        position: relative;
+        width: 100%;
+        line-height: 24px;
+        font-size: 16px;
+        text-align: center;
+        border-top: 1px solid #ccc;
+      }
+      .menu li:first-child {
+        border-top: 0 none;
+      }
+    </style>
+</head>
+
+<body>
+    <ul class='menu' id="menu">
+      <li>选项一</li>
+      <li>选项二</li>
+      <li>选项三</li>
+      <li>选项四</li>
+      <li>选项五</li>
+    </ul>
+
+    <script type="text/javascript">
+        var contextmenu = document.getElementById('menu');
+        var ww = window.innerWidth;
+        var wh = window.innerHeight;
+        document.oncontextmenu = function() {
+            contextmenu.style.display = "block";
+            if( (document.body.scrollLeft + event.x + contextmenu.clientWidth) >= ww) {
+              contextmenu.style.left = document.body.scrollLeft + event.x - 10 - contextmenu.clientWidth + 'px';
+              if (document.body.scrollTop + event.y + contextmenu.clientHeight >= wh) {
+                contextmenu.style.top = document.body.scrollTop + event.y - 10 - contextmenu.clientHeight + 'px';
+              }else {
+                contextmenu.style.top = document.body.scrollTop + event.y +'px';
+              }
+            } else {
+              contextmenu.style.left = document.body.scrollLeft + event.x + 10 +'px';
+              if (document.body.scrollTop + event.y + contextmenu.clientHeight >= wh) {
+                contextmenu.style.top = document.body.scrollTop + event.y - 10 - contextmenu.clientHeight + 'px';
+              }else {
+                contextmenu.style.top = document.body.scrollTop + event.y +'px';
+              }
+            }
+
+
+            return false //返回 false，以屏蔽真正的右键菜单的显示
+        }
+        document.onclick = function() { //当用户用鼠标左键单击客户区时触发函数
+            //如果 contextmenu 层非当前焦点对象
+            if (document.activeElement != contextmenu)
+                contextmenu.style.display = "none" //隐藏 contextmenu 层
+        }
+    </script>
+</body>
+
+</html>
