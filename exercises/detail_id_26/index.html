@@ -52,11 +52,10 @@
 
     <script type="text/javascript">
         var contextmenu = document.getElementById('menu');
-        var ww = window.innerWidth;console.log(ww);
+        var ww = window.innerWidth;
         var wh = window.innerHeight;
         document.oncontextmenu = function() {
             contextmenu.style.display = "block";
-            //console.log(document.body.scrollLeft + event.x + contextmenu.clientWidth);
             if( (document.body.scrollLeft + event.x + 20 + contextmenu.clientWidth) >= ww) {
               contextmenu.style.left = document.body.scrollLeft + event.x - 20 - contextmenu.clientWidth + 'px';
               if (document.body.scrollTop + event.y + contextmenu.clientHeight >= wh) {
