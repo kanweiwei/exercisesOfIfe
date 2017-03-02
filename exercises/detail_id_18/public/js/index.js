@@ -1,5 +1,7 @@
 var THREE = require('three-js');
-
+window.onload = function(){
+  init();
+}
 function init() {
     var renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('mainCanvas')

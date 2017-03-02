@@ -41810,7 +41810,9 @@
 })(this || {});
 },{}],3:[function(require,module,exports){
 var THREE = require('three-js');
-
+window.onload = function(){
+  init();
+}
 function init() {
     var renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('mainCanvas')
