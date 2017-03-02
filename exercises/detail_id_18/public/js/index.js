@@ -1,4 +1,4 @@
-var THREE = require('three-js');
+
 window.onload = function(){
   init();
 }
